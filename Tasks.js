@@ -1,5 +1,5 @@
 'use strict'
-
+//////////////////////////////////////////////////////////
 function getStringLength(string) {
   if (typeof (string) === 'string') {
         let count = 0;
@@ -10,19 +10,19 @@ function getStringLength(string) {
     }
   return 0;
 }
-
+//////////////////////////////////////////////////////////
 function isString(string) {
   return typeof string === 'string' || string instanceof String;
 }
-
+//////////////////////////////////////////////////////////
 function concatenateString(str1 , str2) {
   return str1 + str2;
 }
-
+//////////////////////////////////////////////////////////
 function getFirstChar(str) {
   return typeof (str) === 'string' ? (str[0] ?? '') : false;
 }
-
+//////////////////////////////////////////////////////////
 function removeLeadingAndTrailingWhitespaces(string) {
   let start = 0;
   let end = string.length - 1;
@@ -42,7 +42,7 @@ function removeLeadingAndTrailingWhitespaces(string) {
 
   return result;
 }
-
+//////////////////////////////////////////////////////////
 function removeLeadingWhitespaces(string) {
   let start = 0;
   let end = string.length;
@@ -58,7 +58,7 @@ function removeLeadingWhitespaces(string) {
 
   return result;
 }
-
+//////////////////////////////////////////////////////////
 function removeTrailingWhitespaces(string) {
   let end = string.length - 1;
 
@@ -73,7 +73,7 @@ function removeTrailingWhitespaces(string) {
 
   return result;
 }
-
+//////////////////////////////////////////////////////////
 function repeatString(string, times) {
   if (times <= 0) {
       return '';
@@ -81,7 +81,7 @@ function repeatString(string, times) {
 
     return string.repeat(times);
 }
-
+//////////////////////////////////////////////////////////
 function removeFirstOccurrences(string, value) {
   const index = string.indexOf(value);
 
@@ -89,7 +89,7 @@ function removeFirstOccurrences(string, value) {
 
   return string.slice(0, index) + string.slice(index + value.length);
 }
-
+//////////////////////////////////////////////////////////
 function removeLastOccurrences(string, value) {
 
   const index = string.lastIndexOf(value);
@@ -102,7 +102,7 @@ function removeLastOccurrences(string, value) {
 
   return string.slice(0, index) + string.slice(index + value.length);
 }
-
+//////////////////////////////////////////////////////////
 function sumOfCodes(string) {
   if (typeof string !== 'string') {
     return 0;
@@ -115,22 +115,22 @@ function sumOfCodes(string) {
 
   return sum;
 }
-
+//////////////////////////////////////////////////////////
 function startsWith(string, substr) {
   return string.indexOf(substr) === 0;
 }
-
+//////////////////////////////////////////////////////////
 function endsWith(string, substr) {
   return string.slice(-substr.length) === substr;
 }
-
+//////////////////////////////////////////////////////////
 function formatTime(minutes, seconds) {
   const mm = minutes < 10 ? '0' + minutes : '' + minutes;
   const ss = seconds < 10 ? '0' + seconds : '' + seconds;
 
   return mm + ':' + ss;
 }
-
+//////////////////////////////////////////////////////////
 function reverseString(string) {
   let reversed = '';
 
@@ -140,7 +140,7 @@ function reverseString(string) {
 
   return reversed;
 }
-
+//////////////////////////////////////////////////////////
 function orderAlphabetically(string) {
   const chars = string.split('');
 
@@ -156,11 +156,11 @@ function orderAlphabetically(string) {
 
   return chars.join('');
 }
-
+//////////////////////////////////////////////////////////
 function containsSubstring(string, substring) {
   return string.indexOf(substring) !== -1;
 }
-
+//////////////////////////////////////////////////////////
 function countVowels(string) {
   const vowels = 'EeUuOoAaIiYy';
   let count = 0;
@@ -173,7 +173,7 @@ function countVowels(string) {
 
   return count;
 }
-
+//////////////////////////////////////////////////////////
 function isPalindrome(string) {
   const cleaned = string.toLowerCase().replace(/[^a-z0-9]/g, ''); //   /.../g - границы регулярного выражения
   // g - global поиск т.е. по всему массиву
@@ -191,7 +191,7 @@ function isPalindrome(string) {
 
   return true;
 }
-
+//////////////////////////////////////////////////////////
 function findLongestWord(string) {
   const words = string.split(' ');
   let longest = '';
@@ -204,7 +204,7 @@ function findLongestWord(string) {
 
   return longest;
 }
-
+//////////////////////////////////////////////////////////
 function reverseWords(string) {
   const words = string.split(' ');
   let result = [];
@@ -219,23 +219,23 @@ function reverseWords(string) {
 
   return result.join(' ');
 }
-
+//////////////////////////////////////////////////////////
 function getStringFromTemplate(firstName, surname) {
   return `Hello, ${firstName} ${surname}!`;
 }
-
+//////////////////////////////////////////////////////////
 function extractNameFromTemplate(string) {
   return string.slice(7, -1);
 }
-
+//////////////////////////////////////////////////////////
 function unbracketTag(string ) {
   return string.slice(1, -1);
 }
-
+//////////////////////////////////////////////////////////
 function extractEmails(string) {
   return string.split(';');
 }
-
+//////////////////////////////////////////////////////////
 function encodeToRot13(string) {
   const alphabet  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
   const mixed = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
@@ -246,7 +246,7 @@ function encodeToRot13(string) {
   }
   );
 }
-
+//////////////////////////////////////////////////////////
 function getCardId(card) {
   const suits = ['♣', '♦', '♥', '♠'];
   const numbers = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
